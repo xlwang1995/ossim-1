@@ -9,12 +9,12 @@
 - 中级网络风险级别信息
 - 高层决策支持信息
 
-## Components
+## 主要组件
 
-- Spade: network anomaly detection
-- Snort: pattern matching intrusion detection system
-- Acid: log viewer (Event Database)
-- OpenNMS: Service availability monitoring
+- Spade: 网络异常检测
+- Snort: 模式匹配入侵检测系统
+- Acid: 日志查看器（事件数据库）
+- OpenNMS:服务可用性监控
 - Mrtg: graphing
 - Mysql & PostgreSQL: data storage
 - rrdtool: Round robin data storage
@@ -24,7 +24,7 @@
 - Arpwatch: Host - Mac.
 - More to come....
 
-## Development languages
+## 开发语言
 
 - C
 - Perl
@@ -32,12 +32,12 @@
 - Java
 - Python
 
-## Supported platforms
+## 支持平台
 
 - Linux
 - Limited functionality on: *BSD, Solaris, MacosX.
 
-## Conclusion
+## 小结
 
 Using the above described systems and programming languages our goal is to get
 the most information out of every tool with the following objectives in mind:
