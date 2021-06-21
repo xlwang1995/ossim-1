@@ -1,17 +1,13 @@
 # Os-sim - (c) 2003 ossim.net <http://sourceforge.net/projects/os-sim/>
 
-## About Os-sim
+## 关于 Os-sim
 
-Our goal is to obtain a working SIM (Security Infrastructure Monitor) able to
-integrate, qualify and correlate both high level and low level security and
-network events which is able to compete with commercial products recently
-appearing on the security market.
-Integrate multiple opensource security/network monitoring products to obtain
-three network/host visibility levels:
+我们的目标是获得一个能够与最近出现在安全市场上的商业产品竞争的高级别和低级别安全和网络事件的工作 SIM（安全基础设施监视器）。 
+集成多个开源安全/网络监控产品，获得三个网络/主机可见性级别：
 
-- Low level log/alert/anomaly information
-- Mid level network risk level information
-- High level decision support information
+- 低级日志/警报/异常信息
+- 中级网络风险级别信息
+- 高层决策支持信息
 
 ## Components
 
