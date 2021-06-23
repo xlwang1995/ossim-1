@@ -49,6 +49,7 @@ logger = Logger.logger
 
 class ASECHandler(object):
     """@brief Class to encapsulate all the ASEC functionality """
+    """封装所有ASEC功能的简短类 """
     def __init__(self, conf):
         """Constructor.
         @param conf: The configuration object
