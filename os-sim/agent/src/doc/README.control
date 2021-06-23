@@ -1,26 +1,27 @@
 
-  INTRODUCTION
+  介绍
   ------------
 
-The following document describes the Agent Control API.
+以下文档描述了代理控制API。
 
-When sending requests to the control framework, the string is to take the form
-of:
+向控制框架发送请求时，字符串采用以下形式：
 
 control action="request" id="who" parameter1="value1" parameter2="value2"
 
-In this case the "request" value is the action that is being requested
-and subsequent parameter/value pairs are provided as required. Non required
-parameters should be silently ignored.
+在这种情况下，“请求”值是正在请求并根据需要提供后续的参数/值对的操作，非必需的参数应该被默默地忽略。
 
-The "id" value indicates the id of agent, as specified in its config file, that
-this request is being sent to. Ommission of this value will imply "all", which
-results in a broadcast to all connected agents.
+“id”值指代理的id，如其配置文件中指定的，此请求将被发送到相应id号的代理。 省略此值将意味着“全部”，这将导致向所有连接的代理进行广播。
 
-
-The message return format will have at least the following form.
+消息返回格式至少具有以下形式。
 
 control request id="who" errno="X" error="YYY" transaction="ZZZZZ" ...
+
+其中“requestedaction”是请求的初始动作，指示它与原始请求相关联。 
+“errno”值是操作的错误返回码。 零“0”表示成功，非零表示失败。 
+如果合适，“错误”值提供实际错误消息的字符串文字。 “transaction_id”用于框架内的内部消息管理，可以安全地忽略。
+
+响应中的最后一条消息将被“ackend”值终止，并指示它是最后一条消息，客户端可以停止轮询返回。 
+构成响应一部分的所有其他消息都由“ack”终止，表明消息仍然即将到来。
 
 Where the "requestedaction" is the initial action requested indicating it is
 association with the original request. The "errno" value is the error return
@@ -36,7 +37,7 @@ indicating that messages are still forthcoming.
 
 
 
-  GENERAL COMMANDS
+  一般命令
   ----------------
 
 Command: command_set
@@ -44,9 +45,11 @@ Command: command_set
 Description: List the commands supported by the Agent Control. Return is likely
 to be a multi-message return.
 
-Parameters: Nil.
+描述：列出代理控制支持的命令。 返回很可能是多消息返回。
 
-Returns:
+参数：无（Nil）。
+
+返回值:
   command     - the name of the command.
   description - short description of the command.
 
